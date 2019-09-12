@@ -1,0 +1,36 @@
+# App artifacts
+api_project/_build
+api_project/db
+api_project/deps
+api_project/*.ez
+
+# Generated on crash by the VM
+api_project/erl_crash.dump
+
+# Generated on crash by NPM
+api_project/npm-debug.log
+
+# Static artifacts
+api_project/assets/node_modules
+
+# Since we are building assets from assets/,
+# we ignore priv/static. You may want to comment
+# this depending on your deployment strategy.
+api_project/priv/static/
+
+# Don't push seeds directory
+api_project/priv/repo/seeds
+
+# Files matching config/*.secret.exs pattern contain sensitive
+# data and you should not commit them into version control.
+#
+# Alternatively, you may comment the line below and commit the
+# secrets files as long as you replace their contents by environment
+# variables.
+api_project/config/*.secret.exs
+
+api_project/.vscode
+.vscode
+
+api_project/.idea
+.idea
