@@ -53,10 +53,11 @@ mix phx.server          ### Run this command in the project directory (api_proje
  - delete "http://localhost:4000/api/users/:id" #delete user by id  
 
 # Workingtimes #
-- get "http://localhost:4000/api/workingtimes/:userID?start=XXX&end=YYY" #get all workingtimes  
-- get "http://localhost:4000/api/workingtimes/:userID/:workingtimeID" #get one workingtime
+- get "http://localhost:4000/api/workingtimes/:user_id" #get all workingtimes by user_id  
+- get "http://localhost:4000/api/workingtimes/:user_id?start=XXX&end=YYY" #get all workingtimes by user_id and start - end   
+- get "http://localhost:4000/api/workingtimes/:user_id/:workingtimeID" #get one workingtime
 
-- post "http://localhost:4000/api/workingtimes/:userID" #post workingtime of one user by user_id
+- post "http://localhost:4000/api/workingtimes/:user_id" #post workingtime of one user by user_id
   - ####  Example of body
      - {  
             "data": {  
@@ -77,8 +78,8 @@ mix phx.server          ### Run this command in the project directory (api_proje
  - delete "http://localhost:4000/api/workingtimes/:id" #delete workingtimes by id  
  
  # Clocks #
- - get "http://localhost:4000/api/clocks/:userID" #get clocks of user_id
- - post "http://localhost:4000/api/clocks/:userID" #post clocks of one user by user_id
+ - get "http://localhost:4000/api/clocks/:user_id" #get clocks of user_id
+ - post "http://localhost:4000/api/clocks/:user_id" #post clocks of one user by user_id
    - ####  Example of body
       - {  
             "data": {  

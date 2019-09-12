@@ -237,6 +237,10 @@ defmodule ApiProject.Models do
   """
   def get_workingtime!(id), do: Repo.get!(Workingtime, id)
 
+  def get_workingtimes_by_userID!(user_id) do
+    Repo.all(from(workingtime in Workingtime, where: workingtime.user_id == ^user_id))
+  end
+
   ## get_workingtime by user_id and start - end
   def get_workingtime_by_userID_start_end!(user_id, wt_start, wt_end) do
     wt_st = Timex.parse!(wt_start, "%Y-%m-%d %H:%M:%S", :strftime)

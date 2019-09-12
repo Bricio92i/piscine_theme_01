@@ -31,9 +31,16 @@ defmodule ApiProjectWeb.WorkingtimeController do
     end
   """
 
+  """
   def show(conn, %{"id" => id}) do
     workingtime = Models.get_workingtime!(id)
     render(conn, "show.json-api", data: workingtime)
+  end
+  """
+
+  def show(conn, %{"user_id" => id}) do
+    workingtimes = Models.get_workingtimes_by_userID!(id)
+    render(conn, "show.json-api", data: workingtimes)
   end
 
   def show_wt_user_by_start_end(conn, %{"user_id" => user_id, "start"  => wt_start, "end" => wt_end}) do

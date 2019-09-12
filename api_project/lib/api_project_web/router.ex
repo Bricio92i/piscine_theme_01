@@ -38,6 +38,7 @@ defmodule ApiProjectWeb.Router do
     delete "/users/:id", UserController, :delete
 
     ### Workingtimes
+    get "/workingtimes/:user_id", WorkingtimeController, :show
     get "/workingtimes/:user_id", WorkingtimeController, :show_wt_user_by_start_end
     get "/workingtimes/:user_id/:workingtime_id", WorkingtimeController, :show_wt_by_user_and_wtid
     post "/workingtimes/:user_id", WorkingtimeController, :create
